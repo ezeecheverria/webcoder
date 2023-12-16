@@ -1,0 +1,254 @@
+@mixin size ($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+$height: 45px;
+$width: 45px;
+
+.colorSwatch {
+display: flex;
+gap: 12px;
+
+.colorPink {
+    @include size ($height, $width);
+    background-color: #F6BBE6;
+    border-radius: 100%; 
+}
+
+.colorBlue {
+    @include size ($height, $width);
+    background-color: #6271FB;
+    border-radius: 100%;
+}
+
+.colorYellow {
+    @include size ($height, $width);
+    background-color: #ECFF17;
+    border-radius: 100%;
+}
+
+.colorRed {
+    @include size ($height, $width);
+    background-color: #FF1B1B;
+    border-radius: 100%;
+}
+
+.colorGrey {
+    @include size ($height, $width);
+    background-color: gray;
+    border-radius: 100%;
+}
+
+}
+
+/* PLUS MINUS */
+span {cursor:pointer; }
+.number{
+
+.minus, .plus{
+    width:20px;
+    height:20px;
+    background:#f2f2f2;
+    border-radius:4px;
+    padding:0px;
+    border:1px solid #ddd;
+display: inline-block;
+vertical-align: middle;
+text-align: center;
+}
+input{
+    height:34px;
+width: 100px;
+text-align: center;
+font-size: 26px;
+    border:1px solid #ddd;
+    border-radius:4px;
+display: inline-block;
+vertical-align: middle;
+} }
+
+.productMedia {
+    grid-area: media;
+
+}
+
+.productInfo {
+    grid-area: details;
+    padding: 5%;
+}
+@media screen and (min-width: 768px) {
+.productPage {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "media details";
+    margin: 50px 10%;
+}  }
+
+    .mainPhoto {
+        width: 100%;
+        padding: 0 50px 20px 0;
+        
+    }
+    @media screen and (max-width: 768px) {
+        .mainPhoto {
+            padding: 0 0px 20px 0;
+            
+        }}
+
+
+        .breadcrumbs {
+            font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+a {
+color: #000000;}
+        }
+
+        .productTitle {
+            font-family: 'Gilroy';
+font-style: normal;
+font-weight: 800;
+        }
+
+        .price {
+            
+            font-family: 'Gilroy';
+font-style: normal;
+font-weight: 300;
+font-size: 32px;
+
+        }
+
+        .colorSwatch, .number {
+            padding-bottom: 32px;
+        }
+
+        .addtoCart {
+            max-width: 524px;
+            min-width: fit-content;
+height: 72px;
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+p {
+    font-family: 'Gilroy';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+padding-top: 18px;
+}
+        }
+.bold {
+    font-weight: bold;
+}
+        .buyNow {
+            margin: 18px 0;
+            max-width: 524px;
+            min-width: fit-content;
+height: 72px;
+background: #000000;
+border: 1px solid #000000;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+p {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    color: #FFFFFF;
+padding-top: 18px;
+}
+        }
+
+        .recommended {
+            margin: 0 10%;
+            h2 {
+                font-family: 'Gilroy';
+font-style: normal;
+font-weight: 800;
+font-size: 42px;
+color: #000000;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+
+        .bigSize {
+            height: 384px;
+            width: 352px;
+        }}
+
+        @media screen and (max-width: 768px) {
+
+            .bigSize {
+                height: 244px;
+                width: auto;
+            }}
+
+            
+        @media screen and (min-width:768px) and (max-width: 1200px) {
+
+            .bigSize {
+                height: 264px;
+                width: auto;
+            }}
+
+
+            .thumbnail {
+                width: 126px;
+                height: 126px;
+            }
+            .arrowAnimation {
+transition: 500ms;             
+}
+            .animationText:hover > .arrowAnimation {
+                transform: translateX(10px)
+            }
+
+            .arrowAnimation {
+                display: inline-block; 
+            }
+
+            .addtoCart:hover {
+                cursor: pointer;
+                background-color: #e6e6e6;
+
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                transform: translate3d(0, 0, 0);
+                backface-visibility: hidden;
+                perspective: 1000px;
+            }
+            
+            .buyNow:hover {
+                cursor: pointer;
+                background-color: #5900ff;
+
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                transform: translate3d(0, 0, 0);
+                backface-visibility: hidden;
+                perspective: 1000px;
+            }
+
+            @keyframes shake {
+                10%, 90% {
+                  transform: translate3d(-1px, 0, 0);
+                }
+                
+                20%, 80% {
+                  transform: translate3d(2px, 0, 0);
+                }
+              
+                30%, 50%, 70% {
+                  transform: translate3d(-4px, 0, 0);
+                }
+              
+                40%, 60% {
+                  transform: translate3d(4px, 0, 0);
+                }
+              }

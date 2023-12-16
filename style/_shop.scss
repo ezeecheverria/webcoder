@@ -1,0 +1,204 @@
+$color-black: #000000;
+$body-font: 'Gilroy';
+$p-font: 'Poppins', sans-serif;
+
+.shop {
+    h3 {
+        text-align: center;
+        font-family: $p-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 33px;
+        
+    }
+    h1 {
+        text-align: center;
+        font-family: $body-font;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 59px;
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+}
+
+.sectionBanner {
+    background-image: url(../assets/collection-background.png);
+    background-size: cover;
+    background-repeat: none;
+    height: 556px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3,
+    h1,
+    a {
+        color: white;
+    }
+    
+}
+
+.sectionBanner--toys {
+    background-image: url(../assets/bannerToys.jpeg);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    height: 556px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3,
+    h1,
+    a {
+        color: white;
+    }
+    
+}
+
+.sectionBanner--snacks {
+    background-image: url(../assets/snackBanner.webp);
+    background-size: cover;
+    background-repeat: none;
+    background-position: bottom;
+    height: 556px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3,
+    h1,
+    a {
+        color: white;
+    }
+    
+}
+
+.sectionBanner--apparel {
+    background-image: url(../assets/apparelBanner.jpg);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    height: 556px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3,
+    h1,
+    a {
+        color: white;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .sectionBanner--apparel {
+        background-image: url(../assets/apparelMobile.png);
+}
+.sectionBanner--snacks {
+    background-image: url(../assets/snackMobile.png);
+}}
+.productList--collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    grid-area: products;
+
+    .featuredProduct1 img {
+        width: 310px;
+        height: 334px;
+    }
+
+    h3 {
+        text-align: left;
+    }
+}
+
+.filter {
+    grid-area: filter;
+
+    h2 {
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 38px;
+    }
+}
+@media screen and (min-width: 1400px) {
+.categoryPage {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "filter products";
+    margin: 50px 50px;
+
+}
+.productList--collection {
+    justify-content: flex-start;
+}
+}
+
+.stock {
+    display: flex;
+    gap: 20px;
+    padding: 15px 0;
+
+    h3 {
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+    }
+}
+
+.range {
+    max-width: 260px;
+    padding: 15px 0;
+
+    h3 {
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+    }
+}
+
+.priceStart {
+    border: 0.5px solid #737373;
+    width: 131px;
+    height: 44px;
+    background: #FBFBFB;
+
+
+    p {
+        color: #A8A8A8;
+        padding: 9px 101px 8px 7px;
+    }
+}
+
+.priceRangePrice {
+    display: flex;
+    gap: 18px;
+
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.petType {
+    h3 {
+        text-align: left;
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+    }
+}
